@@ -90,7 +90,7 @@ class SSLChecker:
         if endpoint_data['statusMessage'] == 'Certificate not valid for domain name':
             return context
 
-        context[host]['grade'] = main_request['endpoints'][0]['grade']
+        context[host]['grade'] = request['endpoints'][0]['grade']
         context[host]['poodle_vuln'] = endpoint_data['details']['poodle']
         context[host]['heartbleed_vuln'] = endpoint_data['details']['heartbleed']
         context[host]['heartbeat_vuln'] = endpoint_data['details']['heartbeat']
